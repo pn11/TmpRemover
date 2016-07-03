@@ -20,24 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-/*
-    public void removeFiles(View view){
-        //File file = new File(context.getFilesDir(), filename);
-        //File file = new File(view.getContext().getFilesDir(), "test.oka");
-
-        String filename = "/sdcard/";
-        String string = "Hello world!";
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-*/
 
     public File[] listDir(View view){ // using http://stackoverflow.com/a/8752200
         String pathToScan = "../../../..";
