@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TmpRemover</string>
+    <string name="rmv_text">.tmp File Remover</string>
+    <string name="button_text">Remove .tmp files</string>
+    <string name="status_text">Status: </string>
+    <string name="list_text">list</string>
+</resources>
