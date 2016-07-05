@@ -52,13 +52,20 @@ public class MainActivity extends AppCompatActivity {
     public void removeFiles(View view){
         File[] listOfFiles = listDir(view);
         TextView tv = (TextView)findViewById(R.id.status_tv);
+        String fileThatYouWantToFilter;
+        int nFiles = 0;
+
         for (int i = 0; i < listOfFiles.length; i++) {
-            File file = listOfFiles[i];
-            if (file.isFile()) {
-                file.delete();
+            fileThatYouWantToFilter = listOfFiles[i].getName();
+            if (fileThatYouWantToFilter.endsWith(".tmp")) {
+                File file = listOfFiles[i];
+                if (file.isFile()) {
+                    file.delete();
+                }
+                nFiles += 1;
             }
         }
-        String str = "deleted.";
+        String str = "Deleted " + String.valueOf(nFiles) + " files.";
         tv.setText(str);
     }
 }
